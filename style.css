@@ -1,0 +1,645 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+    
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    margin: 0 3rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  .logo h1 {
+    margin-left: 0.4rem;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #000;
+    font-family: "SF Pro" 
+  }
+  
+  nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-top: 2.0rem;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-left: 2rem;
+    font-family: "SF Pro";
+    font-weight: 700;
+  }
+
+  nav ul li:first-child a {
+    text-decoration: underline;
+    font-size: 1.2rem;
+  }
+
+  header nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "SF Pro";
+  }
+  
+  header nav a:hover {
+    color: grey;
+  }
+  
+  
+  nav ul li:first-child {
+    margin-left: 0;
+  }
+  
+  .nav-button {
+    position: relative;
+    display: inline-block;
+    background-color: #ff385c;
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "SF Pro";
+    font-size: 1rem;
+    margin-top: 4%;
+    overflow: hidden;
+  }
+  
+  .nav-button:hover {
+    color: rgb(241, 241, 241);
+  }
+  
+    
+/* Hero section styles */
+.hero {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+    text-align: center;
+    margin: 0rem 8rem 10rem 8rem;
+    margin-bottom: 0;
+
+  }
+
+  .split-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+    flex-direction: row;
+    margin-top: 0rem;
+    margin-bottom: 4rem;
+
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3.5rem 0;
+    text-align: center;
+
+  }
+      
+  .text-container h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #e30c1bff;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  .text-container h2 {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+
+      ul {
+        list-style: disc;
+        margin-left: 5rem;
+        margin-top: 1rem;
+        margin-bottom: 0.3rem;
+        font-family: "SF Pro";
+        font-size: 1.4rem;
+        white-space: nowrap;
+        text-align: justify;
+      }
+      
+      
+      .text-container p {
+        display: block;
+        font-size: 1.4em;
+        font-weight: bold;
+        margin: 0;
+        margin-bottom: 1rem;
+  
+      }
+
+      
+      .cta-button {
+        position: relative;
+        display: inline-block;
+        background-color: #ff385c;
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: "SF Pro";
+        font-size: 1rem;
+        margin-top: 4%;
+        overflow: hidden;
+      }
+      
+      .cta-button::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120%;
+        height: 120%;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .cta-button:hover::before {
+        opacity: 1;
+      }
+      
+      
+
+      li {
+        margin-bottom: 0.5em;
+      }
+      
+      
+      .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0rem 2rem 4rem 6rem;
+        margin-left: 1rem;
+        text-align: center;
+
+      }
+
+
+      .demo-box {
+        width: 70%;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        margin: 3.5rem auto; /* add this line */
+      }
+      
+      .demo {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      
+      .FAQ-box {
+        margin: 10rem 6rem;
+        grid-row-start: 3;
+      }
+      
+      .faq-container-1 {
+        width: auto;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 2rem;
+        align-items: center;
+      }
+      .faq-container-1 h2 {
+        text-align: center;
+        font-size: 2rem;
+        justify-content: center;
+        
+      }
+      
+
+      .faq-container {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        
+      }
+      
+      .faq {
+        background-color: #fff;
+        padding: 1rem;
+        border-bottom: darkgray solid 1px;
+        margin-left: 15% ;
+      }
+      
+      .faq h3 {
+        margin:0 0 0.5rem 0;
+        font-size: 1.2rem;
+        font-family: "SF Pro";
+        font-weight: 600;
+      }
+      
+      .faq p {
+        font-size: 1rem;
+        font-family: "SF Pro";
+      }
+      
+/* Footer styles */
+footer {
+
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 6rem 2rem 6rem;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+
+  }
+  
+  .form-container h3 {
+    margin-right: 5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 450;
+    color: #000;
+    font-family: "SF Pro";
+  }
+  
+  .form-container form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .form-container label {
+    margin-right: 1rem;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #000;
+    font-family: "SF Pro";
+  }
+  
+  .form-container input[type="email"] {
+    padding: 0.6rem;
+    font-size: 1.1rem;
+    border-radius: 0.3rem;
+    border: none;
+    width: 24rem;
+    border: 1px black solid;
+  }
+  
+  .form-container button[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: none;
+    padding: 0.7rem 1.8rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .form-container button[type="submit"]:hover {
+    background-color: grey;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  
+  .contact {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    font-family: "SF Pro";
+  }
+  
+  .contact a {
+    color: #000;
+    text-decoration: underline;
+  }
+  
+  .contact a:hover {
+    color: grey;
+  }
+  
+
+  @media only screen and (max-width: 900px) {
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    
+    header nav a,
+    nav ul li:first-child a {
+      font-size: 0.8rem;
+      font-weight: 450;
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      align-items: center; /* added align-items */
+    }
+
+
+    nav ul {
+      margin: 2.3rem 0 2rem 0;
+      padding: 0;
+    }
+    
+    .nav-button {
+      font-size: 0.8rem;
+      white-space: nowrap;
+      padding: 0;
+      border: none;
+      text-decoration: underline;
+      border-radius: 0%;
+      background-color: white;
+      color: black;
+    }
+    
+    .logo h1 {
+      font-size: 1rem;
+      margin-left: 0.2rem;
+      margin-right:0.5rem ;
+    }
+    
+    .logo img {
+      height: 1.4rem;
+    }
+    
+    ul {
+    font-size: 1rem;
+    }
+
+    .faq h3 {
+    font-size: 1rem;
+    }
+
+    .faq p {
+    font-size: 0.9rem;
+    }
+    .split-container {
+        display: flex;
+        flex-direction: column-reverse;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        height: fit-content;
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 6rem;
+    }
+    
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0rem 0;
+      text-align: center;
+      width: 18rem;
+    }
+    
+
+
+    .text-container h1{
+      font-size: 2rem;
+    }
+
+    .text-container h2{
+      font-size: 1rem;
+    }
+
+    .text-container p {
+      font-size: 1rem;
+
+    }
+
+    .cta-button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    }
+    .text-container ul {
+      margin-left: 0;
+    }
+
+    ul {
+      list-style: disc;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-family: "SF Pro";
+      font-size: 0.8rem;
+      text-align: justify;
+      max-width: 80%;
+      white-space: normal;
+    }
+    
+    .image-container {
+        width: 18rem;
+        padding: 0rem ;
+        margin-left: 0rem;
+        margin-left: 0;
+    }
+
+
+    .demo-box {
+      width: 70%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      margin: 0.5rem auto; /* add this line */
+      margin-bottom: 2rem;
+    }
+    
+    .demo {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    
+    
+
+    .FAQ-box{
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
+      height: fit-content;
+      justify-items: center;
+      align-items: center;
+    }
+
+    .faq {
+      padding: 3rem;
+      margin-left: 0% ;
+    }
+
+    .faq-container-1 {
+        grid-template-columns: 1fr;
+        position: relative;
+        text-align: center;
+      }
+
+      footer {
+        position: static; /* change from absolute or fixed */
+        margin-top: 4rem;
+      }
+
+      .hero {
+        margin: 0rem 4rem 6rem 4rem;
+      }
+      
+      .split-container {
+        margin-bottom: 4rem;
+      }
+      
+      .FAQ-box {
+        margin-top: 6rem;
+      }
+
+      /* Footer styles */
+footer {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 1rem 2rem 1rem;
+  }
+  
+  .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  }
+  
+  .form-container h3 {
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 450;
+  color: #000;
+  font-family: "SF Pro";
+  }
+  
+  .form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  
+  .form-container label {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #000;
+  font-family: "SF Pro";
+  }
+  
+  .form-container input[type="email"] {
+  padding: 0.3rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: none;
+  width: 20rem;
+  border: 1px black solid;
+  }
+  
+  .form-container button[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  }
+  
+  .form-container button[type="submit"]:hover {
+  background-color: grey;
+  }
+  
+  .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 50rem;
+  margin: 0 auto;
+  }
+  
+  .contact {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #000;
+  font-family: "SF Pro";
+  }
+  
+  .contact a {
+  color: #000;
+  text-decoration: underline;
+  }
+  
+  .contact a:hover {
+  color: grey;
+  }
+      
+  }
+  
+
+
+
+    
+    
